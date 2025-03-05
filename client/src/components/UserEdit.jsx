@@ -11,7 +11,7 @@ function UserEdit() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:4000/api/h2/user/getuser/${id}`)
+      .get(`https://inext-backend.onrender.com/api/h2/user/getuser/${id}`)
       .then((response) => {
         const fetchedUser = response.data.user || response.data;
         if (!fetchedUser) {
@@ -52,7 +52,7 @@ function UserEdit() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .put(`http://localhost:4000/api/h2/user/updateuser/${id}`, formData)
+      .put(`https://inext-backend.onrender.com/api/h2/user/updateuser/${id}`, formData)
       .then((response) => {
         toast.success("User updated successfully!");
         navigate("/userlist");
