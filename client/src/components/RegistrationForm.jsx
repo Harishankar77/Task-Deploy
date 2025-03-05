@@ -60,7 +60,7 @@ function RegistrationForm() {
     if (!validate()) return;
 
     axios
-      .post("http://localhost:4000/api/h2/user/register", formData)
+      .post("https://inext-backend.onrender.com/api/h2/user/register", formData)
       .then((response) => {
         toast.success("Registration successfully :) ");
         navigate("/"); // Redirect to home page
