@@ -19,7 +19,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/api/h2/user/login", formData)
+      .post("https://inext-backend.onrender.com/api/h2/user/login", formData)
       .then((response) => {
         toast.success("Login successful :)");
         navigate("/userlist");
