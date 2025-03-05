@@ -8,7 +8,7 @@ function UserList() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/h2/user/getalluser")
+      .get("https://inext-backend.onrender.com/api/h2/user/getalluser")
       .then((response) => {
         setUsers(response.data);
       })
@@ -26,7 +26,7 @@ function UserList() {
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       axios
-        .delete(`http://localhost:4000/api/h2/user/deleteuser/${id}`)
+        .delete(`https://inext-backend.onrender.com/api/h2/user/deleteuser/${id}`)
         .then(() => {
           setUsers((prevUsers) => prevUsers.filter((user) => user._id !== id));
         })
